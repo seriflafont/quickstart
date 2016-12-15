@@ -1,7 +1,7 @@
 # AEM Front-end Quickstart Scaffold
 This is a pre-packaged scaffold that can be used as a easy way to spin up the front-end for a new AEM site. It is built in a way to make integration within AEM streamlined.
 
-This version does not use es6 javascript. This version:
+###This version does not use es6 javascript. This version:
 * uses handlebars templating
 * uses sass 
 * sets up a bare bones js architecture using the module pattern 
