@@ -9,7 +9,7 @@ This is a pre-packaged scaffold that can be used as a easy way to spin up the fr
 * outputs files in a way that they can be easily converted into the AEM system
 * automatically creates the clientlibs css.txt and js.txt files needed for AEM
 
-## Dependencies:
+###Dependencies:
 * node
 * npm
 
@@ -20,7 +20,7 @@ This is a pre-packaged scaffold that can be used as a easy way to spin up the fr
 4. Once npm has installed the development dependencies, in the terminal, run 'npm run create'. This will prompt you for a new name for your project. (it will replace 'quickstart' which is the default)
 5. Then run 'npm start' to start the local server and begin developing (live reload is enabled).
 
-# Notes
+###Notes
 * Bower is not a dependency but if you want to use it, there is a bower.json file included. 
 * Third party JS libs should be selectively added to the etc/designs/{new-name}/lib/libs folder. The grunt uglify task will compile them into a libs.min.js bundle
 * Third party CSS/Sass libs should be selectively added to the etc/designs/{new-name}/sass/{lib-name} folder. Import as needed into 'main.scss'
