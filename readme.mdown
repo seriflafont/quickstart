@@ -22,5 +22,5 @@ This is a pre-packaged scaffold that can be used as a easy way to spin up the fr
 
 ###Notes
 * Bower is not a dependency but if you want to use it, there is a bower.json file included. 
-* Third party JS libs should be selectively added to the etc/designs/{new-name}/lib/libs folder. The grunt uglify task will compile them into a libs.min.js bundle
-* Third party CSS/Sass libs should be selectively added to the etc/designs/{new-name}/sass/{lib-name} folder. Import as needed into 'main.scss'
+* Third party JS libs should be selectively added to the etc/designs/{new-name}/src/libs folder. The grunt uglify task will compile them into a libs.min.js bundle
+* Third party CSS/Sass libs should be selectively added to the etc/designs/{new-name}/src/sass/{lib-name} folder. Import as needed into 'main.scss'
