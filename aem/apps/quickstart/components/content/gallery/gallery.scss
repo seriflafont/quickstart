@@ -1,0 +1,29 @@
+ul.gallery{
+	list-style: none;
+	margin:0;
+	padding:0;
+	li{
+		@extend .col-md-4, .col-sm-6, .col-lg-4, .col-xs-12;
+		float:left;
+		padding:0;
+		//margin-left:$globalmargin;
+		//margin-top:$globalmargin;
+		background:$hilite;
+		border:2px solid #000;
+		img{
+			width:100%;
+			//max-width: 100%;
+			-webkit-transition: opacity .25s linear;
+			   -moz-transition: opacity .25s linear;
+			    -ms-transition: opacity .25s linear;
+			     -o-transition: opacity .25s linear;
+			        transition: opacity .25s linear;
+			opacity:0.7;
+		}
+		a:hover{
+			img{
+				opacity:1;
+			}
+		}
+	}
+}

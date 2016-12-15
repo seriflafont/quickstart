@@ -1,0 +1,57 @@
+.index{
+	.row{
+		border-bottom:2px solid #000;
+
+		&.defaults{
+			.left-col{
+				background:$hilite;
+			}
+			.right-col{
+				ul li:nth-child(even){
+					background:$hilite;
+				}
+			}
+		}
+		&.instructions{
+			.left-col{
+				background:$althilite;
+			}
+			.right-col{
+				ul li:nth-child(even){
+					background: $althilite;
+				}
+			}
+		}
+	}
+	.left-col{
+		@extend .col-md-3, .col-sm-12, .col-lg-3;
+		border-bottom:2px dotted #000;
+		padding:$globalmargin;
+		h2{
+			font-size: 1.2em;
+			margin:0;
+		}
+	}
+
+	.right-col{
+		@extend .col-md-9, .col-sm-12, .col-lg-9;
+		margin:0;
+		padding:0;
+		@media (min-width: $screen-md-min) { 
+			border-left:2px dotted #000;
+		}
+		
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			li{
+				margin:0;
+				padding:$globalmargin;
+				&:nth-child(odd){
+					background:$light;
+				}
+			}
+		}
+	}
+}

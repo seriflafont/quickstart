@@ -1,0 +1,35 @@
+{{>base/header/header}}
+
+<div class="index">
+	<div class="row defaults">
+		<div class="left-col">
+			<h2>Defaults</h2>
+		</div>
+		<div class="right-col">
+			<ul>
+				<li>includes bootstrap (please remove what you don't need!)</li>
+				<li>includes jquery</li>
+				<li>uses handlebars for templates</li>
+				<li>js is written in es6 and transpiled using rollup</li>
+				<li>compiles templates and serves the pages with express.js</li>
+				<li>includes starter template and component files</li>
+				<li>includes starter js and sass files</li>
+				<li>structured as an AEM project for easier handoff</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row instructions">
+		<div class="left-col">
+			<h2>Instructions</h2>
+		</div>
+		<div class="right-col">
+			<ul>
+				<li>Make sure you rename the following: the project name in package.json, and the 2 directories named 'quickstart'</li>
+				<li>The frontend folder contains the necessary files for serving the pages via express.js.</li>
+				<li>The gruntfile is set up to manage local development, but includes tasks for the maven build on AEM.</li>
+				<li>The pom.xml file includes a maven task that will call the grunt frontend build tasks necessary for AEM. This includes pulling down node and npm as well as the sass and js compilation.</li>
+				<li>The way the js build works currently for local development is that the component js is temporarily copied into a folder local to the designs clientlib directory so they can be injected into the full js build. In AEM this probably wouldn't happen this way (TBD).</li>
+			</ul>
+		</div>
+	</div>
+</div>

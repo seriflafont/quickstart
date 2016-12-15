@@ -1,0 +1,39 @@
+.detail{
+	
+	.row{
+		border-bottom:2px solid #000;
+	}
+	.left-col{
+		@extend .col-md-8, .col-sm-12, .col-lg-8;
+		padding:$globalmargin;
+		h2{
+			font-size: 1.2em;
+			margin-top:$globalmargin;
+		}
+	}
+
+	.right-col{
+		@extend .col-md-4, .col-sm-12, .col-lg-4;
+		margin:0;
+		padding:$globalmargin;
+		@media (min-width: $screen-md-min) { 
+			border-left:2px dotted #000;
+		}
+		h2{
+			font-size: 1.2em;
+			margin-top:$globalmargin;
+		}
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			li{
+				margin:0;
+				padding:$globalmargin;
+				&:nth-child(even){
+					background:$light;
+				}
+			}
+		}
+	}
+}
