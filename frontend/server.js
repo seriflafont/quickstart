@@ -11,8 +11,8 @@ var hbs = require('express-hbs');
 var projectjson = require('./package.json');
 var projectName = projectjson.name;
 var hbsSrcPath = path.join(__dirname, '../aem/apps/'+projectName+'/components');
-var clientLibPath = path.join(__dirname,'../aem/etc/designs/'+projectName);
-var imgPath = path.join(clientLibPath, 'clientlibs/img');
+var clientLibPath = path.join(__dirname,'../aem/etc/designs/'+projectName+'/clientlibs');
+var imgPath = path.join(clientLibPath, 'img');
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 
