@@ -2,12 +2,12 @@
 This is a pre-packaged scaffold that can be used as a easy way to spin up the front-end for a new AEM site. It is built in a way to make integration within AEM streamlined.
 
 This version does not use es6 javascript. This version:
-- uses handlebars templating
-- uses sass 
-- sets up a bare bones js architecture using the module pattern 
-- starts up an express server and serves the templates there for front-end development previewing
-- outputs files in a way that they can be easily converted into the AEM system
-- automatically creates the clientlibs css.txt and js.txt files needed for AEM
+* uses handlebars templating
+* uses sass 
+* sets up a bare bones js architecture using the module pattern 
+* starts up an express server and serves the templates there for front-end development previewing
+* outputs files in a way that they can be easily converted into the AEM system
+* automatically creates the clientlibs css.txt and js.txt files needed for AEM
 
 ## Dependencies:
 * node
