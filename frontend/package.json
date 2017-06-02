@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "grunt localdev",
-    "create": "node create.js"
+    "create": "node create.js",
+    "build-flat":"grunt flat-build",
+    "build-aem":"grunt aem-build"
   },
-  "config":{
-    "resourcePath":"../aem/etc/designs/",
-    "projectPath":"../aem/apps/"
+  "config": {
+    "resourcePath": "../aem/etc/designs/",
+    "projectPath": "../aem/apps/"
   },
   "author": "Sarah Lamont",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "grunt": "^1.0.1",
     "grunt-bower-task": "^0.4.0",
     "grunt-cli": "^1.2.0",
+    "grunt-compile-handlebars": "^2.0.2",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-sass": "^1.2.1"
   },

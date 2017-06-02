@@ -13,6 +13,7 @@ var projectName = projectjson.name;
 var hbsSrcPath = path.join(__dirname, '../aem/apps/'+projectName+'/components');
 var clientLibPath = path.join(__dirname,'../aem/etc/designs/'+projectName+'/clientlibs');
 var imgPath = path.join(clientLibPath, 'img');
+var hbsjson = require('./data/data.json');
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 
@@ -35,12 +36,11 @@ app.engine('hbs', hbs.express4({
 }));
 
 app.get('/', function(req,res){
-	res.render('index');
+	res.render('index', {data:hbsjson});
 });
 
-app.get('/pages/:name?', function(req, res){
-    var data = {title:req.params.name};
-    res.render(req.params.name, { data: data });
+app.get('/:name?.html', function(req, res){
+    res.render(req.params.name, {data:hbsjson});
 });
 
 

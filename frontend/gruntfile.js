@@ -2,7 +2,8 @@ module.exports = function(grunt) {
 	// Project configuration.
 	var globalConfig = {
 		componentRoot:require('./package.json').config.projectPath,
-		resourcesRoot:require('./package.json').config.resourcePath
+		resourcesRoot:require('./package.json').config.resourcePath,
+		hbsjson:require('./data/data.json')
 	};
 
 	grunt.initConfig({
@@ -98,14 +99,67 @@ module.exports = function(grunt) {
 			    src: '**',
 			    dest: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/img/'
 		      }]
+		  },
+		  fonts: {
+		    files: [{
+		    	expand: true,
+			    cwd: '<%= config.resourcesRoot %><%= pkg.name %>/src/fonts/',
+			    src: '**',
+			    dest: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/fonts/'
+		      }]
+		  },
+		  //for deploy on apache static server -- usually used just for review.
+		  flat:{
+			  files: [{
+		    	expand: true,
+			    cwd: '<%= config.resourcesRoot %><%= pkg.name %>/src/img/',
+			    src: '**',
+			    dest: 'flat/img/'
+		      },{
+		    	expand: true,
+			    cwd: '<%= config.resourcesRoot %><%= pkg.name %>/src/fonts/',
+			    src: '**',
+			    dest: 'flat/fonts/'
+		      },{
+				src: '<%= config.resourcesRoot %><%= pkg.name %>/src/libs/html5shiv.min.js', 
+		    	dest: 'flat/js/html5shiv.min.js'
+			  },{
+				src: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/js/libs.min.js', 
+		    	dest: 'flat/js/libs.min.js'
+			  },{
+				src: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/js/site.min.js', 
+		    	dest: 'flat/js/site.min.js'
+			  },{
+				src: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/js/components.min.js', 
+		    	dest: 'flat/js/components.min.js'
+			  },{
+				src: '<%= config.resourcesRoot %><%= pkg.name %>/clientlibs/css/main.css', 
+		    	dest: 'flat/css/main.css'
+			  }]
 		  }
 		},
 		clean: {
 			options: {
-		      force: true
-		    },	
-		  	folder: ['<%= config.resourcesRoot %><%= pkg.name %>/js/components/']
+				force: true
+			},	
+			components: ['<%= config.resourcesRoot %><%= pkg.name %>/js/components/'],
+			flatFiles: ['flat/*']
 		},
+		'compile-handlebars': {
+			allStatic: {
+				files: [{
+					expand: true,
+					cwd: '<%= config.componentRoot %><%= pkg.name %>/components/page/',
+					src: '*.hbs',
+					dest: 'flat/',
+					ext: '.html'
+				}],
+				preHTML: 'data/prehtml.html',
+				postHTML: 'data/posthtml.html',
+				templateData: {data:require('./data/data.json')},
+				partials: '<%= config.componentRoot %><%= pkg.name %>/components/**/*.hbs',
+			}
+		},//'deep/**/*.handlebars'
 		"file-creator": {
 			clientlibs: {
 		        files: [
@@ -160,15 +214,20 @@ module.exports = function(grunt) {
 	        },
 	        img:{
 	        	files:['<%= config.resourcesRoot %><%= pkg.name %>/src/img/**/*.png',
+	        	'<%= config.resourcesRoot %><%= pkg.name %>/src/img/**/*.svg',
 	        	'<%= config.resourcesRoot %><%= pkg.name %>/src/img/**/*.jpg',
 	        	'<%= config.resourcesRoot %><%= pkg.name %>/src/img/**/*.gif',
 	        	'<%= config.resourcesRoot %><%= pkg.name %>/src/img/**/*.ico'],
-	        	tasks:['express:dev']
+	        	tasks:['copy:images','express:dev']
 	        },
 	        views: {
 	            files: ['<%= config.componentRoot %><%= pkg.name %>/components/**/*.hbs'],
 	            tasks:['express:dev']
-	        }
+	        },
+			data:{
+				files: ['./data/**/*'],
+	            tasks: ['express:dev']
+			}
 		}
 	});
 	// These plugins provide necessary tasks.
@@ -180,10 +239,17 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-express-server');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-file-creator');
+	grunt.loadNpmTasks('grunt-compile-handlebars');
 
 	//Tasks for local development
 	grunt.registerTask('serve', [ 'express:dev', 'watch' ])
-	grunt.registerTask('localdev', ['sass', 'uglify:compresslibs', 'uglify:compresscomponents', 'uglify:compressbundle','file-creator','copy:html5shiv','copy:images', 'serve']);
+	grunt.registerTask('localdev', ['sass', 'uglify:compresslibs', 'uglify:compresscomponents', 'uglify:compressbundle','file-creator','copy:html5shiv','copy:images', 'copy:fonts','serve']);
+
+	//task to create flat static files for review -- if you have to deploy on a static apache server
+	grunt.registerTask('flat-build',['clean:flatFiles','compile-handlebars', 'copy:flat']);
+
+	//task to build for AEM
+	grunt.registerTask('aem-build', ['sass', 'uglify:compresslibs', 'uglify:compresscomponents', 'uglify:compressbundle','file-creator','copy:html5shiv','copy:images', 'copy:fonts']);
 
 	//default task used for AEM build - includes pulling down any necessary bower resources -- removed for now -->'bower', 
 	grunt.registerTask('default', ['sass', 'uglify']);
