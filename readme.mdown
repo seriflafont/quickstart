@@ -1,15 +1,17 @@
 # AEM Front-end Quickstart Scaffold
 This is a pre-packaged scaffold that can be used as a easy way to spin up the front-end for a new AEM site. It is built in a way to make integration within AEM streamlined.
 
-###This version does not use es6 javascript. This version:
+### This version does not use es6 javascript. This version:
 * uses handlebars templating
 * uses sass 
 * sets up a bare bones js architecture using the module pattern 
 * starts up an express server and serves the templates there for front-end development previewing
 * outputs files in a way that they can be easily converted into the AEM system
 * automatically creates the clientlibs css.txt and js.txt files needed for AEM
+* can be compiled with a json data stub to mimic AEM inputs
+* can be compiled to a flat static site for loading on apache server for preview purposes
 
-###Dependencies:
+### Dependencies:
 * node
 * npm
 
@@ -19,8 +21,10 @@ This is a pre-packaged scaffold that can be used as a easy way to spin up the fr
 3. Run 'npm install'
 4. Once npm has installed the development dependencies, in the terminal, run 'npm run create'. This will prompt you for a new name for your project. (it will replace 'quickstart' which is the default)
 5. Then run 'npm start' to start the local server and begin developing (live reload is enabled).
+6. To compile for AEM run 'npm run build-aem'
+7. To compile for static preview (on apache server) run 'npm run build-flat'
 
-###Notes
+### Notes
 * Bower is not a dependency but if you want to use it, there is a bower.json file included. 
 * Third party JS libs should be selectively added to the etc/designs/{new-name}/src/libs folder. The grunt uglify task will compile them into a libs.min.js bundle
 * Third party CSS/Sass libs should be selectively added to the etc/designs/{new-name}/src/sass/{lib-name} folder. Import as needed into 'main.scss'
