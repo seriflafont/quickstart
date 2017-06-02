@@ -14,9 +14,6 @@ var hbsSrcPath = path.join(__dirname, '../aem/apps/'+projectName+'/components');
 var clientLibPath = path.join(__dirname,'../aem/etc/designs/'+projectName+'/clientlibs');
 var imgPath = path.join(clientLibPath, 'img');
 var hbsjson = require('./data/data.json');
-// var routes = require('./routes/index');
-// var users = require('./routes/users');
-
 var app = express();
 
 //static pages
@@ -25,8 +22,6 @@ app.use(require("connect-livereload")());
 app.use(favicon(imgPath + '/favicon.ico'));
 
 // view engine setup
-//hbs.registerPartials(path.join(hbsSrcPath, 'content'));
-//hbs.registerPartials(hbsSrcPath);
 app.set('views', path.join(hbsSrcPath, 'page'));
 app.set('view engine', 'hbs');
 app.engine('hbs', hbs.express4({

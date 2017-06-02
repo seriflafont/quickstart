@@ -146,20 +146,31 @@ module.exports = function(grunt) {
 			flatFiles: ['flat/*']
 		},
 		'compile-handlebars': {
-			allStatic: {
+			headFoot: {
 				files: [{
 					expand: true,
-					cwd: '<%= config.componentRoot %><%= pkg.name %>/components/page/',
-					src: '*.hbs',
+					cwd: '<%= config.componentRoot %><%= pkg.name %>/components/base',
+					src: '**/*.hbs',
+					dest: 'data/',
+					ext: '.html'
+				}],
+				templateData: {data:require('./data/data.json')},
+				partials: '<%= config.componentRoot %><%= pkg.name %>/components/**/*.hbs',
+			},
+			staticPages: {
+				files: [{
+					expand: true,
+					cwd: '<%= config.componentRoot %><%= pkg.name %>/components/page',
+					src: '**/*.hbs',
 					dest: 'flat/',
 					ext: '.html'
 				}],
-				preHTML: 'data/prehtml.html',
-				postHTML: 'data/posthtml.html',
+				preHTML: 'data/head/head.html',
+				postHTML: 'data/foot/foot.html',
 				templateData: {data:require('./data/data.json')},
 				partials: '<%= config.componentRoot %><%= pkg.name %>/components/**/*.hbs',
 			}
-		},//'deep/**/*.handlebars'
+		},
 		"file-creator": {
 			clientlibs: {
 		        files: [
@@ -246,7 +257,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('localdev', ['sass', 'uglify:compresslibs', 'uglify:compresscomponents', 'uglify:compressbundle','file-creator','copy:html5shiv','copy:images', 'copy:fonts','serve']);
 
 	//task to create flat static files for review -- if you have to deploy on a static apache server
-	grunt.registerTask('flat-build',['clean:flatFiles','compile-handlebars', 'copy:flat']);
+	grunt.registerTask('flat-build',['clean:flatFiles','compile-handlebars:headFoot','compile-handlebars:staticPages', 'copy:flat']);
 
 	//task to build for AEM
 	grunt.registerTask('aem-build', ['sass', 'uglify:compresslibs', 'uglify:compresscomponents', 'uglify:compressbundle','file-creator','copy:html5shiv','copy:images', 'copy:fonts']);

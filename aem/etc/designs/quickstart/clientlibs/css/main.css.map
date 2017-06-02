@@ -77,7 +77,7 @@
 		"../../src/sass/_components.scss",
 		"../../../../../apps/quickstart/components/content/gallery/gallery.scss",
 		"../../../../../apps/quickstart/components/content/textarea/textarea.scss",
-		"../../../../../apps/quickstart/components/base/nav/nav.scss",
+		"../../../../../apps/quickstart/components/content/nav/nav.scss",
 		"../../src/sass/_layout.scss",
 		"../../src/sass/pages/_index.scss",
 		"../../src/sass/pages/_detail.scss"
