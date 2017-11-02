@@ -1,0 +1,68 @@
+.footer, footer{
+    padding-top:rem($globalmarginpx*3);
+    padding-bottom:rem($globalmarginpx*6);
+
+   .inner{
+       .sr-logo{
+           max-width:rem($mainnav-fontsize*6);
+           margin-bottom: 2vh;
+       }
+        text-align: center;
+        .footer-body{
+            display: inline-block;
+            margin:0 auto;
+            margin-bottom:$verticalmargin;
+
+            .site-social-links{
+                list-style: none;
+                margin:$globalmargin 0 0 0;
+                padding:0;
+                .share-icon-container{
+                    display:inline-block;
+                    margin:0 .5em 0 0;
+                    padding:0;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                    a{
+                        span{
+                            display:none;
+                        }
+                        width:2.5em;
+                        height:2.5em;
+                        font-size:rem($mainnav-fontsize);
+                        display: inline-block;
+                        padding-top:1em;
+                        text-decoration: none;
+                        color:$dark;
+                        &:hover{
+                            color:$hilite;
+                        }
+                    }
+                }
+            }
+        }
+        .copyright{
+            color:#666666;
+            margin-bottom:$verticalmargin;
+            p{
+                font-family: $bodyFontBold;
+                letter-spacing: 0.04em;
+                font-size:rem($mainnav-fontsize);
+                span{
+                    @media #{$mobile} {
+                        display: block;
+                        margin:0 0 6px 0;
+                    }
+                }
+                
+            }
+            a{
+                text-decoration: none;
+                margin-left:10px;
+                
+                
+            }
+        }
+   } 
+}

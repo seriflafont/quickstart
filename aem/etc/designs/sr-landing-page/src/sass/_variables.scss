@@ -1,0 +1,56 @@
+$font-resizer-value:1.75;
+
+$globalmarginpx: 20;
+$globalmargin:rem($globalmarginpx);
+$verticalmargin:rem($globalmarginpx * 2);
+$horizontal-min-width-margin:6%;
+$max-width:980px;
+$gridcols: 12;
+$col-1-amt: #{1/$gridcols * 100%};
+$grid-col-margin:$verticalmargin;
+
+$header-logo-max:130px;
+
+$inline-image-margin:rem(40);
+$module-padding:rem(60);
+
+//font sizes in pt
+$mainnav-fontsize: 6 * $font-resizer-value;
+$header-fontsize: 36 * $font-resizer-value;
+$sectionhead-fontsize:18 * $font-resizer-value;
+$subhead-fontsize: 12 * $font-resizer-value;
+$eyebrow-fontsize: 9 * $font-resizer-value;
+$para-fontsize: 9 * $font-resizer-value;
+$boxlink-fontsize:9 * $font-resizer-value;
+$keyfindings-fontsize:29 * $font-resizer-value;
+
+//color palette
+$dark:#18181e; //dark grey
+$light:#f2f2f2; //very light grey
+$hilite:#002fff; //salmon
+$althilite:#c8e9f2; //lightblue
+$grey: #a7a7a7;
+$darkgrey: #666;
+$socialGrey: #98b0b7;
+$copy:$dark;
+$white: #ffffff;
+$red: #fc284b;
+$primary: $hilite;
+$blue: #0030ff;
+$lightGrey: #d3d3d3;
+
+//fonts
+$bodyFont:'gotham_book','universregular','Helvetica', 'sans-serif';
+$bodyFontBold:'gotham_med','Helvetica', 'sans-serif';
+$headFont:'miller','universbold','Helvetica', 'sans-serif';
+$headFontThin:'gotham_med','univers47_condensed_light','Helvetica', 'sans-serif';
+
+//breakpoints
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width:768px) and (max-width:1024px)";
+$tablet-portrait:"screen and (min-width:768px) and (max-width:1024px) and (orientation: portrait)";
+$tablet-and-under: "(max-width:1024px)";
+$desktop: "(min-width: 1025px)";
+$desktop-xl: "(min-width:2000px)";
+$mobile-tablet_potrait: "(max-width: 768px)";
+

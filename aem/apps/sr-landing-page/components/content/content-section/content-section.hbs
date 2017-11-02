@@ -1,0 +1,28 @@
+<div class="body-content-wrapper content-section-wrapper {{componentdata.theme}}" id={{componentdata.id}}>
+    <div class="inner clearfix content-group">
+        <h2 class="eyebrow-style blue">{{componentdata.sectionsuphead}}</h2>
+        <h3 class="sectionhead-style">{{componentdata.sectiontitle}}</h3>
+        {{#if componentdata.intro100content}}
+            {{{componentdata.intro100content}}}
+        {{/if}}
+    </div>
+    {{#if componentdata.subhead-callout}}
+        <div class="inner clearfix content-group">
+            {{#if componentdata.subhead-callout}}
+                <h2 class="subhead-style blue">
+                    {{componentdata.subhead-callout}}
+                </h2>
+            {{/if}}
+            {{#if componentdata.leftcolcontent}}
+                <div class="leftcol">
+                    {{{componentdata.leftcolcontent}}}
+                </div>
+            {{/if}}
+            {{#if componentdata.rightcolcontent}}
+                <div class="rightcol">
+                    {{{componentdata.rightcolcontent}}}
+                </div>
+            {{/if}}
+        </div>
+    {{/if}}
+</div>

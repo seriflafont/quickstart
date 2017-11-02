@@ -1,0 +1,107 @@
+
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.visually-hidden{
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.left{
+	float:left !important;
+}
+.right{
+	float:right !important;
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.hide-mobile{
+   @media #{$mobile} {
+      display: none !important;
+  }
+}
+.text-center{
+  text-align: center;
+}
+
+$class-slug: col !default;
+
+@for $i from 1 through 20{
+  .#{$class-slug}-#{$i*5} {
+    width: 5% * $i;
+  }
+}
+
+$class-slug-grid: grid-col !default;
+
+@for $i from 1 through $gridcols{
+  .#{$class-slug-grid}-#{$i} {
+    width: #{$i /$gridcols * 100%};
+  }
+}
+
+.animate-on-scroll{
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all 1s $bezier;
+  position: relative;
+  z-index: -1;
+  &.animate-in{
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+.grey-bg{
+  background:#f2f2f2;
+}
+&.blue{
+  color:$hilite;
+}
+
+.display-flex-row{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* You can set flex-wrap and flex-direction individually */
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* Or do it all in one line with flex flow */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+}
+
+.display-flex-centered-col{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}

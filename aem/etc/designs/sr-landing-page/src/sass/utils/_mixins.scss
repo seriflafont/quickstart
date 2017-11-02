@@ -1,0 +1,33 @@
+// simple gradient mixin
+@mixin background-gradient($colorright,$colorleft:$primary) {
+    background: linear-gradient(to right, $colorleft 0%, $colorright 100%);
+}
+
+//gradient mixin from top to bottom
+@mixin background-gradient-top($colortop,$colorbottom:$primary){
+    background: linear-gradient($colorbottom 0%, $colortop 100%);
+}
+
+// give module-background a gradient
+@mixin module-background-gradient($colorright,$colorleft:$primary) {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include background-gradient($colorright,$colorleft);
+}
+@mixin text-with-bg-gradient($colorright,$colorleft:$primary){
+    background: linear-gradient(to right, $colorleft 0%, $colorright 100%);
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+}
+@mixin cross-browser-anim($animname, $animtime:1s, $animiteration:1, $animfillmode:forwards){
+    -webkit-animation: $animname $animtime $animiteration $animfillmode; /* Safari 4+ */
+  -moz-animation:    $animname $animtime $animiteration $animfillmode; /* Fx 5+ */
+  -o-animation:      $animname $animtime $animiteration $animfillmode; /* Opera 12+ */
+  animation:         $animname $animtime $animiteration $animfillmode;
+}

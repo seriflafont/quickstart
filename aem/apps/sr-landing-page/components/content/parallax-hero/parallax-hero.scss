@@ -1,0 +1,62 @@
+.body-content-wrapper{
+    &.parallax-hero{
+        .parallax-wrapper{
+            position:relative;
+            .inner{
+              position:relative;
+              max-width:$max-width;
+              transform:translateY(-100px);
+              @media #{$mobile} {
+                transform:translateY(0px);
+              }
+              &.not-loaded{
+                background:url('../img/ring-light.gif') no-repeat center;
+                min-height:50vh;
+              }
+              -webkit-transition: all .25s linear;
+                -moz-transition: all .25s linear;
+                -ms-transition: all .25s linear;
+                -o-transition: all .25s linear;
+                transition: all .25s linear;
+    
+              .layer-holder{
+                   position:absolute;
+                   bottom:-100px;
+                   right:0;
+                   left:0;
+                   text-align: center;
+                   @media #{"(max-width:"+$max-width+")"} {
+                        left:6%;
+                        right:6%;
+                        bottom:-50px;
+                    }
+                    @media #{$mobile}{
+                        bottom:0px;
+                    }
+              }
+              img{
+                   max-width:100%;
+                   opacity:1;
+                   -webkit-transition: all .25s linear;
+                    -moz-transition: all .25s linear;
+                    -ms-transition: all .25s linear;
+                    -o-transition: all .25s linear;
+                    transition: all .25s linear;
+                   &.not-loaded{
+                       opacity:0;
+                   }
+                }
+            }
+            .background{
+                @include module-background-gradient(#ff2e54,$hilite);
+                height:80%;
+                top:20%;
+                opacity:1;
+                &.not-loaded{
+                    opacity:0;
+                }
+            }
+           
+        }
+    }
+}

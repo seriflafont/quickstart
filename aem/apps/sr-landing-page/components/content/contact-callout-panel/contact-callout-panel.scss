@@ -1,0 +1,16 @@
+.contact-callout {
+    background-color: $primary;
+    @extend .module-padding;
+    .inner{
+        text-align: center;
+        color: $white;
+        
+        .sectionhead-style{
+            margin-bottom:1em;
+            padding:0 gridcols(2.5);
+            @media #{$mobile} {
+                padding:0 $horizontal-min-width-margin;
+            }
+        }
+    }
+}

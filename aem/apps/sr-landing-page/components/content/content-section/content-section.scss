@@ -1,0 +1,19 @@
+.content-section-wrapper{
+    .content-group{
+        padding:$module-padding 0;
+        
+        &+.content-group{
+            padding:0 0 $module-padding 0;
+            @media #{"(max-width:"+$max-width+")"} {
+                padding:0 $horizontal-min-width-margin $module-padding $horizontal-min-width-margin;
+            }
+        }
+        @media #{"(max-width:"+$max-width+")"} {
+            padding:$module-padding $horizontal-min-width-margin;
+        }
+        
+    }
+    &.light-grey{
+        background-color:$light;
+    }
+}

@@ -1,0 +1,141 @@
+$nav-bottom-position:21px;
+$max-nav-width:870px;
+
+nav, .nav-component{
+	position: relative;
+	width: calc(100% - #{$header-logo-max + $globalmarginpx});
+	
+	text-align: right;
+	display: block;
+	float:right;
+	padding:0;
+	-webkit-transition: opacity .25s linear;
+     -moz-transition: opacity .25s linear;
+      -ms-transition: opacity .25s linear;
+       -o-transition: opacity .25s linear;
+          transition: opacity .25s linear;
+	.logo{
+		@extend .header-logo;
+	}
+	.mobile-menu{
+		padding:$globalmargin;
+		position: fixed;
+		top:0;
+		left:0;
+		z-index: 100;
+		opacity: 0;
+		text-align: left;
+		@include cross-browser-anim(navHide, .5s);
+	}
+	&.open{
+		.mobile-menu{
+			@include cross-browser-anim(navReveal,.5s);
+			ul.hamburger-menu{
+				top:0;
+				bottom:0;
+				@include cross-browser-anim(navReveal,.5s);
+				li:not(.hamburger-button){
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+	ul{
+		list-style:none;
+		margin:0;
+		padding:0;
+		
+		&.hamburger-menu{
+			@include cross-browser-anim(navHide, .5s);
+			position: fixed;
+			opacity:0;
+			right:0;
+			left:0;
+			z-index: -1;
+			background:$hilite;
+			color:#fff;
+			
+			text-align: center;
+    		padding: 20vh 0;
+			font-size:em(24);
+			li{
+				display:block;
+				margin:5vh 0;
+				&:not(.hamburger-button){
+					transform: translateY(-100%);
+					a{
+						font-size:rem($subhead-fontsize);
+					}
+				}
+				transition: all .5s $bezier;
+				a{
+					color:#fff;
+					&:hover{
+						color:#fff;
+					}
+				}
+				&.hamburger-button{
+					z-index: 101;
+					position: absolute;
+					right: $globalmargin;
+					top:$globalmargin;
+					margin:0;
+					
+					.boxed-link{
+						padding:0 10px;
+						border: 1px solid $hilite;
+						font-size:rem($para-fontsize);
+					}
+				}
+			}
+		}
+		li{
+			margin:0 rem(16) 0 0;
+			padding:0;
+			display: inline-block;
+			&:last-child{
+				margin-right:0;
+			}
+			@media (max-width:$max-nav-width) {
+				margin-right:1vh;
+			}
+			&.hide-mobile{
+				@media (max-width:$max-nav-width) {
+					display:none;
+				}
+			}
+			
+			&.hamburger-button{
+				display: none;
+				@media (max-width:$max-nav-width) {
+					display:inline-block;
+				}
+				.boxed-link{
+					background:$hilite;
+					color:#fff;
+					padding:10px;
+				}
+			}
+			a{
+				@extend .nav-a-style;
+							
+				&.animate-underline{
+					background-image: linear-gradient(to bottom, $hilite 0%, $hilite 100%);
+					background-size: 0% 2px;
+				}
+				
+				&:hover{
+					color:$hilite;
+					text-decoration: none;
+					background-size:100% 2px;
+				}
+				&.selected{
+					color:$dark;
+					background-image: linear-gradient(to bottom, $hilite 0%, $hilite 100%);
+					background-size: 100% 2px;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

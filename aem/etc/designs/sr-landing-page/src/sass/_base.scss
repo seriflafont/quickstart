@@ -1,0 +1,231 @@
+// _base.scss
+// ==============
+*{
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-size: 100%;
+    font-family: $bodyFont;
+    color:$copy;
+    @media #{$mobile} {
+		font-size: 90%;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $headFont;
+  margin:0;
+  font-weight: normal;
+  //do it this way because we need to make sure it works with screen readers semantically so what the designer has put in the designs
+  &.h1-style{
+    font-family:$headFont;
+    font-size:rem($header-fontsize);
+    @media #{$mobile} {
+		font-size:rem($header-fontsize * .7);
+	}
+  }
+  &.sectionhead-style{
+      font-family: $headFont;
+      font-size:rem($sectionhead-fontsize);
+  }
+  &.eyebrow-style{
+      text-transform: uppercase;
+      letter-spacing:.08em;
+      font-family:$bodyFontBold;
+      font-size:rem($eyebrow-fontsize);
+      line-height:rem($eyebrow-fontsize * 1.5);
+      margin-bottom:rem($globalmarginpx * .35);
+  }
+  &.subhead-style{
+      text-transform: uppercase;
+      letter-spacing:.05em;
+      font-family:$bodyFontBold;
+      font-size:rem($subhead-fontsize);
+      line-height: rem($subhead-fontsize*1.5);
+      @media #{$mobile} {
+		font-size:rem($subhead-fontsize * .9);
+	}
+  }
+  &.blue{
+      color:$hilite;
+  }
+}
+
+blockquote{
+    border-left: 0.15rem solid $hilite;
+    width: 100%;
+    padding-left: 1em;
+    margin: 1em 0;
+    font-family:$headFont;
+    font-size:rem($subhead-fontsize);
+    color:$hilite;
+}
+
+p{
+    font-family:$bodyFont;
+    margin-bottom:$globalmargin;
+    font-size:rem($para-fontsize);
+    line-height:rem($para-fontsize*2);
+    &.remove-top-margin{
+        margin-top:0;
+    }
+    &.remove-bottom-margin{
+        margin-bottom:0;
+    }
+}
+a{
+    -webkit-transition: all .25s linear;
+     -moz-transition: all .25s linear;
+      -ms-transition: all .25s linear;
+       -o-transition: all .25s linear;
+          transition: all .25s linear;
+
+    &.boxed-link{
+        text-transform: uppercase;
+        display: inline-block;
+        font-size:rem($para-fontsize);
+        font-family: $bodyFontBold;
+        padding:10px 16px;
+        text-decoration: none;
+        color:#fff;
+        border:2px solid #fff;
+        letter-spacing: .05em;
+        &:hover{
+            background:$darkgrey;
+        }
+        &.dark{
+            color:$dark;
+            border-color:$dark;
+        }
+        &.hilite{
+            color:$hilite;
+            border-color:$hilite;
+            &:hover{
+                color:#fff;
+                background-color:$hilite;
+            }
+        }
+    }
+}
+.nav-a-style{
+    font-size:rem($mainnav-fontsize);
+    font-family: $bodyFontBold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color:$grey;
+    &.boxed-link{
+        font-size:rem($mainnav-fontsize);
+        border-color:$hilite;
+        color:$hilite;
+        &:hover{
+            background:$hilite;
+            color:#fff;
+        }
+    }
+}
+img{
+    max-width:100%;
+    width:100%;
+}
+//form styles
+
+
+.form-element{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+
+  font-family:$bodyFont;
+  padding:8px;
+  border:1px solid #ccc;
+}
+
+input[type=submit], button, a.button{
+    @extend .form-element;
+    background:$hilite;
+    border:none;
+    width:80%;
+    margin:1vh 0;
+    color:#fff;
+    text-transform: uppercase;
+    font-family:$bodyFontBold;
+    padding:10px;
+    letter-spacing: .1em;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    &[disabled]{
+        background:#d39e9e;
+    }
+    &:hover{
+        background:#a1605d;
+    }
+    @media #{$mobile} {
+        padding:14px;
+    }
+}
+select{
+    @extend .form-element;
+    background: url("../img/dd-arrows.svg") no-repeat 97% center #fafafa;
+    background-size: 7px 16px;
+    margin:1vh 0;
+    font-family:$bodyFont;
+    padding:8px 24px 8px 8px;
+    border-color:#ccc;
+    @media #{$mobile} {
+        padding:12px 24px 12px 12px;
+    }
+}
+//for IE
+select::-ms-expand {
+    display: none;
+}
+
+//list styles
+dl{
+    margin:$globalmargin 0;
+    padding:0;
+    display: inline-block;
+    width:100%;
+    @media #{$tablet} {
+        width:50%;
+    }
+    dt{
+        @extend h2.eyebrow-style;
+        @extend .blue;
+        margin-bottom: rem($globalmarginpx/2);
+    }
+    dd{
+        @extend p;
+        margin:0 0 rem($globalmarginpx/8) 0;
+        padding-left:$globalmargin;
+        position: relative;
+        &:before{
+            content: '•';
+            position: absolute;
+            left:0;
+        }
+    }
+}
