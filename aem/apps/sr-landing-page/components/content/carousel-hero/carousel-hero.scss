@@ -1,0 +1,25 @@
+.body-content-wrapper{
+    &.hero-wrapper{
+        padding-top:90px; 
+        .hero{
+            background:url('../img/cash-money-15207731-1024x768.png') no-repeat;
+            background-size:cover;
+            background-position:center;
+            padding:$module-padding 0;
+        }
+        .heading{
+            @extend .leftcol;
+            color:#fff;
+        }
+        .image{
+            @extend .rightcol;
+            img{
+                float:right;
+                @media #{$tablet-and-under} {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}

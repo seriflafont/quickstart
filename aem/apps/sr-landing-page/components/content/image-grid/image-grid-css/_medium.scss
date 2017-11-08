@@ -1,0 +1,342 @@
+//*------------------------------------*\
+//    $MEDIUM BREAKPOINT
+//*------------------------------------*/
+
+@media screen and (min-width: '#{$medium-breakpoint}px') {
+    .feed {
+        header {
+            .module-content {
+                .eyebrow {
+                    font-size: $scale03;
+                }
+
+                .headline {
+                    font-size: $scale08;
+                }
+            }
+        }
+    }
+
+    .feed-filter {
+        &-control {
+            font-size: $scale03;
+        }
+    }
+}
+
+@media screen and (min-width: '#{$medium-breakpoint}px'), screen and (orientation:landscape) {
+    .feed {
+        &-item {
+            &-content-copy {
+                .eyebrow {
+                    font-size: $scale04;
+                }
+
+                .headline {
+                    font-size: $scale07;
+                }
+
+                .arrow {
+                    font-size: $scale04;
+                    margin-left: $scale04 * -1;
+                }
+            }
+
+
+            // Alignment of copy in large rectangles
+            @include all-large-rectangle-feed-items-selector {
+
+                // All containers (1, 7, 13 etc and 6, 12, 18 etc) need to be of aspect ratio 1:1
+                &:before {
+                    padding-top: 100%;
+                }
+
+                &.has-image {
+                    .feed-item-content-copy {
+                        height: 50%;
+                    }
+
+                    // Themes for large tiles with image
+                    // .light-all {
+                    //     .eyebrow, .arrow {
+                    //         color: $white;
+                    //     }
+
+                    //     .headline {
+                    //         color: $white;
+                    //     }
+
+                    //     .subhead {
+                    //         color: $white;
+                    //     }
+                    // }
+
+                    // .light-green {
+                    //     .eyebrow, .arrow {
+                    //         color: $primary;
+                    //     }
+
+                    //     .headline {
+                    //         color: $black;
+                    //     }
+
+                    //     .subhead {
+                    //         color: $black;
+                    //     }
+                    // }
+
+                    // .dark-all {
+                    //     .eyebrow, .arrow {
+                    //         color: $primary;
+                    //     }
+
+                    //     .headline {
+                    //         color: $black;
+                    //     }
+
+                    //     .subhead {
+                    //         color: $black;
+                    //     }
+                    // }
+
+                    // .dark-green {
+                    //     .eyebrow, .arrow {
+                    //         color: $primary;
+                    //     }
+
+                    //     .headline {
+                    //         color: $black;
+                    //     }
+
+                    //     .subhead {
+                    //         color: $black;
+                    //     }
+                    // }
+                }
+
+                // Align text to top, selected by author
+                .top-align {
+                    .feed-item-content-copy {
+                        align-self: flex-start;
+                    }
+
+                    // Override the default alignment for large feed items
+                    .feed-item-content-background-image {
+                        background-position: top;
+                    }
+                }
+
+                // Align to bottom, selected by author
+                .bottom-align {
+                    .feed-item-content-copy {
+                        align-self: flex-end;
+                    }
+
+                    // Override the default alignment for large feed items
+                    .feed-item-content-background-image {
+                        background-position: bottom;
+                    }
+                }
+            }
+
+            // Common styles for all small rectangles
+            @include all-small-rectangle-feed-items-selector {
+
+                &.has-image {
+                    .feed-item-content-copy {
+                        height: 100%;
+                    }
+                    .light-all {
+                        .eyebrow, .arrow {
+                            color: $primary;
+                        }
+
+                        .headline {
+                            color: $black;
+                        }
+
+                        .subhead {
+                            color: $black;
+                        }
+                    }
+                }
+
+                // Hover scale for images in small rectangles is 7.5%
+                &:hover {
+                    &.has-image .bg-zoom {
+                        transform: scale(1.075);
+                    }
+                }
+
+                &.has-image {
+
+                    // Align text to top, selected by author
+                    .top-align {
+                        .feed-item-content-copy {
+                            align-self: flex-start;
+                        }
+
+                        // Override the default alignment for large feed items
+                        .feed-item-content-background-image {
+                            background-position: bottom;
+                        }
+                    }
+
+                    // Align to bottom, selected by author
+                    .bottom-align {
+                        .feed-item-content-copy {
+                            align-self: flex-end;
+                        }
+
+                        // Override the default alignment for large feed items
+                        .feed-item-content-background-image {
+                            background-position: top;
+                        }
+                    }
+
+                    &:before {
+                        padding-top: 50%;
+                    }
+
+                    // Set both feed-item-content-copy and feed-item-content-background to 50%
+                    .feed-item-content-copy, .feed-item-content-background {
+                        width: 50%;
+                        position: relative;
+                        text-align: left;
+                        align-items: flex-start;
+                    }
+
+                    // Set default properties of left & right arrow for split rectangles
+                    .feed-item-content-copy {
+                        .headline {
+                            font-size: $scale04;
+                        }
+
+                        a {
+                            text-align: left;
+                        }
+                    }
+
+                    // Set arrows in split feed to the left of the container since default is to middle
+                    .arrow {
+                        left: inherit;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+
+            @include all-small-rectangle-right-image-feed-items-selector {
+                &.has-image {
+                    .feed-item-content-copy:after {
+                        content: '';
+                    }
+
+                    // Set content-copy as first item regardless of markup order
+                    .feed-item-content-copy {
+                        order: 1;
+                    }
+
+                    // Set content-background as second item
+                    .feed-item-content-background {
+                        order: 2;
+                    }
+                }
+            }
+
+            @include all-small-rectangle-left-image-feed-items-selector {
+                &.has-image {
+                    .feed-item-content-copy:before {
+                        content: '';
+                    }
+
+                    .feed-item-content-copy {
+                        order: 2;
+                    }
+
+                    .feed-item-content-background {
+                        order: 1;
+                    }
+                }
+            }
+
+            @include last-if-remainder-and-square {
+                &:before {
+                    padding-top: 50%;
+                }
+            }
+
+            @include last-if-remainder-one {
+
+                &.has-image {
+                    .feed-item-content-copy {
+                        height: 100%;
+                    }
+                }
+
+                // Hover scale for images in small rectangles is 7.5%
+                &:hover {
+                    &.has-image .bg-zoom {
+                        transform: scale(1.075);
+                    }
+                }
+
+                &.has-image {
+
+                    // Align text to top, selected by author
+                    .top-align {
+                        .feed-item-content-copy {
+                            align-self: flex-start;
+                        }
+
+                        // Override the default alignment for large feed items
+                        .feed-item-content-background-image {
+                            background-position: bottom;
+                        }
+                    }
+
+                    // Align to bottom, selected by author
+                    .bottom-align {
+                        .feed-item-content-copy {
+                            align-self: flex-end;
+                        }
+
+                        // Override the default alignment for large feed items
+                        .feed-item-content-background-image {
+                            background-position: top;
+                        }
+                    }
+
+                    &:before {
+                        padding-top: 50%;
+                    }
+
+                    // Set both feed-item-content-copy and feed-item-content-background to 50%
+                    .feed-item-content-copy, .feed-item-content-background {
+                        width: 50%;
+                        position: relative;
+                        text-align: left;
+                        align-items: flex-start;
+                    }
+
+                    // Set default properties of left & right arrow for split rectangles
+                    .feed-item-content-copy {
+                        .headline {
+                            font-size: $scale04;
+                        }
+                    }
+
+                    // Set arrows in split feed to the left of the container since default is to middle
+                    .arrow {
+                        left: inherit;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            @include last-if-remainder-two {
+                margin-right: auto;
+            }
+        }
+    }
+}

@@ -31,3 +31,30 @@
   -o-animation:      $animname $animtime $animiteration $animfillmode; /* Opera 12+ */
   animation:         $animname $animtime $animiteration $animfillmode;
 }
+
+@mixin module-spacing($top: 1, $bottom: 1, $left: $default-module-side-padding, $right: $default-module-side-padding, $type: padding) {
+    #{$type}: {
+        top: calc(10vw * #{$top});
+        bottom: calc(10vw * #{$bottom});
+        left: $left;
+        right: $right;
+    }
+    @media screen and (orientation:portrait) {
+        #{$type}: {
+            top: calc(20vw * #{$top});
+            bottom: calc(20vw * #{$bottom});
+        }
+    }
+    // @media screen and (min-width: #{$medium-breakpoint}px) and (orientation:portrait) {
+    //     #{$type}: {
+    //         top: calc(15vw * #{$top});
+    //         bottom: calc(15vw * #{$bottom});
+    //     }
+    // }
+    // @media screen and (min-width: #{$large-breakpoint}px) and (orientation:portrait) {
+    //     #{$type}: {
+    //         top: calc(10vw * #{$top});
+    //         bottom: calc(10vw * #{$bottom});
+    //     }
+    // }
+}
