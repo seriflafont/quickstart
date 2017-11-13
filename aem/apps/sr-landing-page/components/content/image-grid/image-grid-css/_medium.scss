@@ -2,7 +2,7 @@
 //    $MEDIUM BREAKPOINT
 //*------------------------------------*/
 
-@media screen and (min-width: '#{$medium-breakpoint}px') {
+@media #{$tablet} {
     .feed {
         header {
             .module-content {
@@ -24,7 +24,7 @@
     }
 }
 
-@media screen and (min-width: '#{$medium-breakpoint}px'), screen and (orientation:landscape) {
+@media #{$tablet}, screen and (orientation:landscape) {
     .feed {
         &-item {
             &-content-copy {
@@ -55,63 +55,6 @@
                     .feed-item-content-copy {
                         height: 50%;
                     }
-
-                    // Themes for large tiles with image
-                    // .light-all {
-                    //     .eyebrow, .arrow {
-                    //         color: $white;
-                    //     }
-
-                    //     .headline {
-                    //         color: $white;
-                    //     }
-
-                    //     .subhead {
-                    //         color: $white;
-                    //     }
-                    // }
-
-                    // .light-green {
-                    //     .eyebrow, .arrow {
-                    //         color: $primary;
-                    //     }
-
-                    //     .headline {
-                    //         color: $black;
-                    //     }
-
-                    //     .subhead {
-                    //         color: $black;
-                    //     }
-                    // }
-
-                    // .dark-all {
-                    //     .eyebrow, .arrow {
-                    //         color: $primary;
-                    //     }
-
-                    //     .headline {
-                    //         color: $black;
-                    //     }
-
-                    //     .subhead {
-                    //         color: $black;
-                    //     }
-                    // }
-
-                    // .dark-green {
-                    //     .eyebrow, .arrow {
-                    //         color: $primary;
-                    //     }
-
-                    //     .headline {
-                    //         color: $black;
-                    //     }
-
-                    //     .subhead {
-                    //         color: $black;
-                    //     }
-                    // }
                 }
 
                 // Align text to top, selected by author

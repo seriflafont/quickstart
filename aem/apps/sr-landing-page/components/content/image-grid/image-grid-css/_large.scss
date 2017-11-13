@@ -2,7 +2,7 @@
 //    $LARGE BREAKPOINT
 //*------------------------------------*/
 
-@media screen and (min-width: '#{$large-breakpoint}px') {
+@media #{$desktop} {
     .feed {
 
         // Styles for curated feed
