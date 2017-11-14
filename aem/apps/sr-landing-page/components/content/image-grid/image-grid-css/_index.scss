@@ -1,33 +1,11 @@
-$scale02: $mainnav-fontsize;
-$scale03: $mainnav-fontsize;
-$scale04: $mainnav-fontsize;
-$scale05:$mainnav-fontsize;
-$scale06: $mainnav-fontsize;
-$scale07: $mainnav-fontsize;
-$scale08: $mainnav-fontsize;
-$scale09: $mainnav-fontsize;
-$light-gray:$grey;
-$bezier: cubic-bezier(.32, .01, 0, 1);
-$z-index-200:200;
-$z-index-100:100;
-$feed-theme-light-gray:$grey;
-$feed-theme-white:$white;
-$sans:$bodyFont;
-$font-weight-bold:500;
-$spacing-sans:0.01;
-
-
 // Feed theme Colors 
 $feed-theme-cosmic:					$primary;
-$feed-theme-dark-gray: 			$darkgrey;
-$feed-theme-medium-gray:              $grey;
-$feed-theme-secondary-light-gray:    #303035;
+$feed-theme-dark-gray: 			    $darkgrey;
+$feed-theme-medium-gray:            $grey;
+$feed-theme-secondary-light-gray: #303035;
+$feed-theme-light-gray:             $grey;
+$feed-theme-white:                  $white;
 
-$small-breakpoint: 0;
-$medium-breakpoint: 768;
-$large-breakpoint: 992;
-$x-large-breakpoint: 1200;
-$xx-large-breakpoint: 1600;
 @mixin feed-theme($theme-color: $feed-theme-cosmic, $is-large-tile: true) {
     @if $is-large-tile == true {
         .feed-item-content-background {
@@ -206,39 +184,6 @@ $xx-large-breakpoint: 1600;
     }
 }
 
-
-.dark-hover {
-    .bg-zoom {
-        transition: transform 0.5s $bezier;
-        &:before {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: $black;
-            opacity: 0;
-            transition: opacity 0.5s $bezier;
-            content: '';
-        }
-    }
-}
-
-.arrow-hover {
-    .arrow {
-        opacity: 0;
-        animation: 0.2s $bezier 0s forwards arrow-slideout;
-    }
-
-    &:hover, &:focus {
-        .arrow {
-            opacity: 1;
-            animation: 0.2s $bezier 0s forwards arrow-slidein;
-        }
-    }
-}
 @import "small";
 @import "medium";
 @import "large";
-@import "xlarge";

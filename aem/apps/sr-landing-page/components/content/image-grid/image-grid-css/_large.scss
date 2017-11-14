@@ -5,43 +5,6 @@
 @media #{$desktop} {
     .feed {
 
-        // Styles for curated feed
-        &.curated-feed {
-            .feed-item {
-                &-content-copy {
-                    .headline {
-                        font-size: $scale06;
-                    }
-                }
-
-                @include all-small-rectangle-feed-items-selector {
-                    &.has-image {
-                        .feed-item-content-copy {
-
-                            .eyebrow {
-                                font-size: $scale03;
-                            }
-
-                            .headline {
-                                font-size: $scale05;
-                            }
-
-                            .arrow {
-                                font-size: $scale03;
-                                margin-left: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.landing-feed {
-            & > .module-content {
-                @include module-spacing(0, 0.5, 10vw, 10vw);
-            }
-        }
-
         &-item {
             width: 50%;
 
@@ -61,80 +24,38 @@
                 margin-top: -50%;
             }
 
-             &[data-position="in-viewport"] {
-                .feed-item-content,
-                .eyebrow,
-                .headline {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-                .feed-item-content {
-                    transition-duration: 1s;
-                }
-                .eyebrow {
-                    transition-duration: 1.25s;
-                }
-                .headline {
-                    transition-duration: 1.5s;
-                }
-            }
-
-            &[data-position="below-viewport"] {
-                .feed-item-content {
-                    transform: translateY(25%);
-                }
-                .eyebrow {
-                    transform: translateY(2%);
-                }
-                .headline {
-                    transform: translateY(4%);
-                }
-            }
-
             &.filler-tile {
                 display: block;
             }
 
             &-content-copy {
-                .eyebrow {
-                    font-size: $scale02;
-                }
+                // .eyebrow {
+                //     font-size: $scale02;
+                // }
 
                 .headline {
-                    font-size: $scale05;
-                    //max-width: 13em;
+                    font-size:rem($subhead-fontsize);
                 }
 
-                .arrow {
-                    font-size: $scale02 * 1.15;
-                    margin-left: $scale02 * 1.15 * -1;
-                }
+                // .arrow {
+                //     font-size: $scale02 * 1.15;
+                //     margin-left: $scale02 * 1.15 * -1;
+                // }
             }
 
-            @include all-small-rectangle-feed-items-selector {
-                &.has-image {
-                    .feed-item-content-copy {
-                        .headline {
-                            font-size: $scale04;
-                        }
-                    }
-                }
-            }
-        }
-
-        &-load-more {
-            &-container {
-                @include module-spacing(0, 0, 0, 0);
-            }
+            // @include all-small-rectangle-feed-items-selector {
+            //     &.has-image {
+            //         .feed-item-content-copy {
+            //             .headline {
+            //                 font-size: $scale04;
+            //             }
+            //         }
+            //     }
+            // }
         }
 
         &-list-container {
             @include module-spacing(0, 0.5, 0, 0);
-        }
-
-        &-filter {
-            flex-wrap: nowrap;
-            justify-content: flex-end;
         }
 
     }

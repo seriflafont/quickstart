@@ -2,45 +2,23 @@
 //    $MEDIUM BREAKPOINT
 //*------------------------------------*/
 
-@media #{$tablet} {
-    .feed {
-        header {
-            .module-content {
-                .eyebrow {
-                    font-size: $scale03;
-                }
-
-                .headline {
-                    font-size: $scale08;
-                }
-            }
-        }
-    }
-
-    .feed-filter {
-        &-control {
-            font-size: $scale03;
-        }
-    }
-}
-
 @media #{$tablet}, screen and (orientation:landscape) {
     .feed {
         &-item {
-            &-content-copy {
-                .eyebrow {
-                    font-size: $scale04;
-                }
+            // &-content-copy {
+            //     .eyebrow {
+            //         font-size: $scale04;
+            //     }
 
-                .headline {
-                    font-size: $scale07;
-                }
+            //     .headline {
+            //         font-size: $scale07;
+            //     }
 
-                .arrow {
-                    font-size: $scale04;
-                    margin-left: $scale04 * -1;
-                }
-            }
+            //     .arrow {
+            //         font-size: $scale04;
+            //         margin-left: $scale04 * -1;
+            //     }
+            // }
 
 
             // Alignment of copy in large rectangles
@@ -151,9 +129,9 @@
 
                     // Set default properties of left & right arrow for split rectangles
                     .feed-item-content-copy {
-                        .headline {
-                            font-size: $scale04;
-                        }
+                        // .headline {
+                        //     font-size: $scale04;
+                        // }
 
                         a {
                             text-align: left;
@@ -263,11 +241,11 @@
                     }
 
                     // Set default properties of left & right arrow for split rectangles
-                    .feed-item-content-copy {
-                        .headline {
-                            font-size: $scale04;
-                        }
-                    }
+                    // .feed-item-content-copy {
+                    //     .headline {
+                    //         font-size: $scale04;
+                    //     }
+                    // }
 
                     // Set arrows in split feed to the left of the container since default is to middle
                     .arrow {
