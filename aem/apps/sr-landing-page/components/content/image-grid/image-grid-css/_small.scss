@@ -29,19 +29,19 @@
         }
     }
     
-    .arrow-hover {
-        .arrow {
-            opacity: 0;
-            animation: 0.2s $bezier 0s forwards arrow-slideout;
-        }
+    // .arrow-hover {
+    //     .arrow {
+    //         opacity: 0;
+    //         animation: 0.2s $bezier 0s forwards arrow-slideout;
+    //     }
     
-        &:hover, &:focus {
-            .arrow {
-                opacity: 1;
-                animation: 0.2s $bezier 0s forwards arrow-slidein;
-            }
-        }
-    }
+    //     &:hover, &:focus {
+    //         .arrow {
+    //             opacity: 1;
+    //             animation: 0.2s $bezier 0s forwards arrow-slidein;
+    //         }
+    //     }
+    // }
 
     &-list-container {
         position:relative;

@@ -60,6 +60,14 @@
     }
 }
 
+@keyframes tile-slideIn {
+    0% {
+        transform: translateY(60vh) scaleX(1.35);
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+    }
+}
 @keyframes arrow-slidein {
     0% {
         opacity: 0;
@@ -79,6 +87,27 @@
     100% {
         opacity: 0;
         transform: translateX(200%);
+    }
+}
+
+@keyframes arrow-herotile-slideout {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+}
+@keyframes arrow-herotile-slidein {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
 

@@ -1,3 +1,21 @@
+// ======================================
+// Visually Hidden
+//
+// Visually hide the element from the
+// screen but still have it accessible
+// via screenreaders
+//
+// ======================================
+@mixin isVisuallyHidden() {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 // simple gradient mixin
 @mixin background-gradient($colorright,$colorleft:$primary) {
     background: linear-gradient(to right, $colorleft 0%, $colorright 100%);
