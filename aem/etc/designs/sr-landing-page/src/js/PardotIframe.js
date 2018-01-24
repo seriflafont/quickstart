@@ -32,3 +32,14 @@
 		});
 	});
 }(jQuery));
+
+// corresponding pardot code
+// <script type="text/javascript">
+// 	var height = (document.querySelector('html').offsetHeight + 20);
+// 	window.top.postMessage('pardotFormHeight=' + height+',url='+window.location+',event=load', '*');
+
+// 	window.addEventListener('resize', function(e){
+// 		var height = (document.querySelector('html').offsetHeight + 20);
+// 		window.top.postMessage('pardotFormHeight=' + height+',url='+window.location+',event=resize', '*');
+// 	});
+// </script>
