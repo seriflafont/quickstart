@@ -14,12 +14,12 @@ $module-padding:rem(60);
 $bezier: cubic-bezier(.32, .01, 0, 1);
 
 //font sizes in pt
-$mainnav-fontsize: 6 * $font-resizer-value;
-$header-fontsize: 36 * $font-resizer-value;
+$mainnav-fontsize: 7 * $font-resizer-value;
+$header-fontsize: 32 * $font-resizer-value;
 $sectionhead-fontsize:18 * $font-resizer-value;
 $subhead-fontsize: 12 * $font-resizer-value;
 $eyebrow-fontsize: 9 * $font-resizer-value;
-$para-fontsize: 9 * $font-resizer-value;
+$para-fontsize: 10 * $font-resizer-value;
 $boxlink-fontsize:9 * $font-resizer-value;
 $keyfindings-fontsize:29 * $font-resizer-value;
 
@@ -40,10 +40,10 @@ $lightGrey: #d3d3d3;
 $black:$dark;
 
 //fonts
-$bodyFont:'gotham_book','universregular','Helvetica', 'sans-serif';
-$bodyFontBold:'gotham_med','Helvetica', 'sans-serif';
+$bodyFont:'Calibri','Helvetica', 'sans-serif';
+$bodyFontBold:'Calibri','Helvetica', 'sans-serif';
 $headFont:'Georgia','Helvetica', 'serif';
-$headFontThin:'gotham_med','univers47_condensed_light','Helvetica', 'sans-serif';
+$headFontThin:'Calibri', 'Helvetica', 'sans-serif';
 
 //breakpoints
 $medium-breakpoint: 768;

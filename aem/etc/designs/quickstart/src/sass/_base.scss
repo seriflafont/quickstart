@@ -43,6 +43,7 @@ h1,h2,h3,h4,h5,h6 {
       font-size:rem($eyebrow-fontsize);
       line-height:rem($eyebrow-fontsize * 1.5);
       margin-bottom:rem($globalmarginpx * .35);
+      font-weight: bold;
   }
   &.subhead-style{
       text-transform: uppercase;
@@ -98,6 +99,7 @@ a{
         color:#fff;
         border:2px solid #fff;
         letter-spacing: .05em;
+        font-weight: bold;
         &:hover{
             background:$darkgrey;
         }
@@ -118,9 +120,10 @@ a{
 .nav-a-style{
     font-size:rem($mainnav-fontsize);
     font-family: $bodyFontBold;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: .02em;
     color:$grey;
     &.boxed-link{
         font-size:rem($mainnav-fontsize);

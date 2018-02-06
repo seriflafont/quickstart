@@ -1,24 +1,19 @@
 .body-content-wrapper{
     &.hero-wrapper{
         padding-top:90px; 
+        position:relative;
         .hero{
-            background:url('../img/cash-money-15207731-1024x768.png') no-repeat;
+            background:url('../img/greyblock.jpg') no-repeat;
             background-size:cover;
             background-position:center;
             padding:$module-padding 0;
+            min-height:50vh;
         }
         .heading{
-            @extend .leftcol;
+            position:absolute;
+            bottom:$module-padding;
+            @extend .col-80;
             color:#fff;
-        }
-        .image{
-            @extend .rightcol;
-            img{
-                float:right;
-                @media #{$tablet-and-under} {
-                    display: none;
-                }
-            }
         }
         
     }
