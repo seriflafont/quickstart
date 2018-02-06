@@ -1,5 +1,5 @@
 # AEM Front-end Quickstart Scaffold
-This is a pre-packaged scaffold that can be used as a easy way to spin up the front-end for a new AEM site using the SR Landing Page as the base design/component structure. It is built in a way to make integration within AEM streamlined.
+This is a scaffold that can be used as a easy way to spin up the front-end for a new AEM site. It is built in a way to make integration within AEM streamlined.
 
 ### About this scaffold:
 * uses handlebars templating
