@@ -1,5 +1,5 @@
 {
-    "title":"SapientRazorfish Financial Services",
+    "title":"",
     "analytics":{
         "headscript":"",
         "footerscript":""
@@ -8,16 +8,16 @@
         "id":"section01Section",
         "sectiontitle":"Section Header Style - Section 01",
         "sectionsuphead":"Supporting Header Style",
-        "intro100content":"<p>Here's a 100% width content area. Cronut readymade direct trade distillery seitan church-key yuccie meh fam quinoa 90's mixtape skateboard. Helvetica cornhole YOLO farm-to-table. Thundercats kale chips enamel pin affogato roof party, 8-bit tousled poutine live-edge try-hard sustainable heirloom.</p><img class=\"animate-on-scroll inline-image\" src=\"img/Image_Touchscreen.jpg\" alt=\"Image of Upside down bank\">",
+        "intro100content":"<p>Here's a 100% width content area. Cronut readymade direct trade distillery seitan church-key yuccie meh fam quinoa 90's mixtape skateboard. Helvetica cornhole YOLO farm-to-table. Thundercats kale chips enamel pin affogato roof party, 8-bit tousled poutine live-edge try-hard sustainable heirloom.</p><img class=\"animate-on-scroll inline-image\" src=\"img/greyblock.jpg\" alt=\"Image of Upside down bank\">",
         "subhead-callout":"Content heading Call-out style example Typewriter yuccie cliche cardigan pitchfork copper mug. Adaptogen distillery shabby chic, gastropub wolf heirloom vaporware.",
         "leftcolcontent":"<p>Two column content area shown here. This is paragraph style.</p><blockquote>Blockquote style. Semiotics austin kitsch cray yr synth cred thundercats migas snackwave portland tumeric readymade four dollar toast wolf.</blockquote><p>Cray viral stumptown literally food truck humblebrag ugh cold-pressed venmo. Umami swag tote bag, yuccie pop-up gastropub helvetica vexillologist mixtape chambray locavore gentrify. Umami coloring book authentic polaroid venmo. Mixtape sartorial fanny pack, DIY ugh af wayfarers. DIY 3 wolf moon wolf wayfarers marfa. Gentrify affogato edison bulb snackwave, wolf green juice photo booth beard la croix. XOXO you probably haven't heard of them ennui, pickled echo park fashion axe 3 wolf moon enamel pin. Direct trade tofu aesthetic street art cliche activated charcoal put a bird on it selvage bicycle rights artisan kogi.</p><a class=\"hilite boxed-link overlay-template-launch\" href=\"javascript:void(0);\" title=\"Contact\">LAUNCH SAMPLE OVERLAY</a>",
         "rightcolcontent":"<dl><dt>Here's a list header</dt><dd>List item style</dd><dd>Umami coloring book authentic</dd><dd>Axe 3 wolf moon enamel pin</dd><dd>Polaroid venmo</dd></dl><dl><dt>Here's a list header</dt><dd>List item style</dd><dd>Umami coloring book authentic</dd><dd>Axe 3 wolf moon enamel pin</dd><dd>Polaroid venmo</dd></dl>"
     },
     "section02":{
         "id":"section02Section",
-        "sectiontitle":"Financial Services_Reimagined",
+        "sectiontitle":"",
         "sectionsuphead":"About Us",
-        "intro100content":"<p>SapientRazorfish helps financial services companies envision, design, and build their future. We understand what it takes to re-build the entire value chain using digital technology, data, and cognitive computing. And we know how to deliver scalable, compliant, differentiated experiences that inspire customers to reimagine their personal finance stories.</p><p>Disruption in financial services has reached unprecedented levels, driven by evolving customer expectations, new technologies, and increasing complexities around compliance and reporting. At SapientRazorfish, we partner with financial services institutions to meet real disruption with real digital transformation. Our company is purpose-built to deliver enterprise-wide digital excellence, grounded in a radically customer-centric approach. </p><dl><dt>We create positive impact across:</dt><dd>Customer Experience</dd><dd>Data &amp; Artificial Intelligence</dd><dd>Marketing &amp; IT Modernization</dd><dd>Digital Business Strategy &amp; Innovation</dd></dl><dl><dt>Financial Services Industries We Serve:</dt><dd>Retail and Commercial Banking</dd><dd>Property &amp; Casualty and Life Insurance</dd><dd>Asset &amp; Wealth Management</dd></dl><img class=\"animate-on-scroll inline-image\" src=\"img/Image_Touchscreen.jpg\" alt=\"Image of Upside down bank\">"
+        "intro100content":"<p>Gentrify affogato edison bulb snackwave, wolf green juice photo booth beard la croix. XOXO you probably haven't heard of them ennui, pickled echo park fashion axe 3 wolf moon enamel pin. Direct trade tofu aesthetic street art cliche activated charcoal put a bird on it selvage bicycle rights artisan kogi.</p>"
     },
     "section03":{
         "theme":"light-grey",
