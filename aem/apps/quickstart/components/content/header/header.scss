@@ -7,11 +7,12 @@ header, #header{
     }
 }
 .header-logo{
-    img{
-        max-width:rem($mainnav-fontsize*13);
-        width:100%;
+    h1{
+        font-size:rem(18);
+        line-height: rem(22);
+        margin-top:10px;
     }
-    max-width: 20%;
+    max-width: 60%;
     min-width: $header-logo-max;
     display:inline-block;
 }
