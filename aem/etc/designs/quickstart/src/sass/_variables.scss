@@ -8,10 +8,13 @@ $max-width:980px;
 $gridcols: 12;
 $col-1-amt: #{1/$gridcols * 100%};
 $grid-col-margin:$verticalmargin;
-$header-logo-max:400px;
 $inline-image-margin:rem(40);
 $module-padding:rem(60);
 $bezier: cubic-bezier(.32, .01, 0, 1);
+
+$header-logo-max:0px;
+$nav-bottom-position:21px;
+$max-nav-width:900px;
 
 //font sizes in pt
 $mainnav-fontsize: 7 * $font-resizer-value;

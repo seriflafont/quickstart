@@ -1,6 +1,6 @@
 header, #header{
     &.body-content-wrapper{
-        padding:$globalmargin;
+        padding:$globalmargin 0;
         position: fixed;
         background: #fff;
         z-index: 200;
@@ -11,8 +11,14 @@ header, #header{
         font-size:rem(18);
         line-height: rem(22);
         margin-top:10px;
+        @media (max-width:$max-nav-width) {
+            margin-top:0;
+            span{
+                display: block;
+            }
+        }
     }
-    max-width: 60%;
-    min-width: $header-logo-max;
+    max-width: 50%;
+    //min-width: $header-logo-max;
     display:inline-block;
 }

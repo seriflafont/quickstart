@@ -7,12 +7,15 @@
             background-size:cover;
             background-position:center;
             padding:$module-padding 0;
-            min-height:50vh;
+            min-height:70vh;
+            @media #{$mobile} {
+                min-height:50vh;
+            }
         }
         .heading{
             position:absolute;
             bottom:$module-padding;
-            @extend .col-80;
+            @extend .col-60;
             color:#fff;
         }
         

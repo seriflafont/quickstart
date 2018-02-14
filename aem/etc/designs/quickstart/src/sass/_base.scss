@@ -88,7 +88,10 @@ a{
       -ms-transition: all .25s linear;
        -o-transition: all .25s linear;
           transition: all .25s linear;
-
+    color:currentColor;
+    &:visited{
+        color:currentColor;
+    }
     &.boxed-link{
         text-transform: uppercase;
         display: inline-block;

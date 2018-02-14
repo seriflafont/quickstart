@@ -1,10 +1,9 @@
-$nav-bottom-position:21px;
-$max-nav-width:870px;
+
 
 nav, .nav-component{
 	position: relative;
-	width: calc(100% - #{$header-logo-max + $globalmarginpx});
-	
+	//width: calc(100% - #{$header-logo-max + $globalmarginpx});
+	width:50%;
 	text-align: right;
 	display: block;
 	float:right;
