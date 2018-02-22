@@ -26,6 +26,9 @@
     clear: both;
   }
 }
+.hide{
+  display: none;
+}
 .hide-mobile{
    @media #{$mobile} {
       display: none !important;
@@ -56,7 +59,7 @@ $class-slug-grid: grid-col !default;
   opacity: 0;
   transition: all 1s $bezier;
   position: relative;
-  z-index: -1;
+  //z-index: -1;
   &.animate-in{
       transform: translateY(0%);
       opacity: 1;

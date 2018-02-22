@@ -133,6 +133,11 @@ nav, .nav-component{
 					background-image: linear-gradient(to bottom, $hilite 0%, $hilite 100%);
 					background-size: 100% 2px;
 					cursor: default;
+					&.boxed-link{
+						
+						background:$hilite;
+            			color:#fff;
+					}
 				}
 			}
 		}

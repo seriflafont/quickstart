@@ -5,6 +5,14 @@ header, #header{
         background: #fff;
         z-index: 200;
     }
+    .eyebrow-style{
+        margin-top:8px;
+        margin-bottom:-4px;
+        @media (max-width:$max-nav-width) {
+            margin-top:0;
+            margin-bottom:0;
+        }
+    }
 }
 .header-logo{
     h1{
@@ -19,6 +27,5 @@ header, #header{
         }
     }
     max-width: 50%;
-    //min-width: $header-logo-max;
     display:inline-block;
 }

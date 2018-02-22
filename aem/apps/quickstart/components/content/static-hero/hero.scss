@@ -3,11 +3,12 @@
         padding-top:90px; 
         position:relative;
         .hero{
-            background:url('../img/greyblock.jpg') no-repeat;
+            background:url('http://www.sarahlamont.com/pico/img/pico/livingroom02.jpg') no-repeat;
             background-size:cover;
-            background-position:center;
+            background-position-x:left;
+            background-position-y: center;
             padding:$module-padding 0;
-            min-height:70vh;
+            min-height:50vh;
             @media #{$mobile} {
                 min-height:50vh;
             }
@@ -15,8 +16,11 @@
         .heading{
             position:absolute;
             bottom:$module-padding;
-            @extend .col-60;
+            @extend .col-50;
             color:#fff;
+            @media #{$mobile} {
+                width:80%;
+            }
         }
         
     }

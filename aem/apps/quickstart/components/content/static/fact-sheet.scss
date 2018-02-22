@@ -14,13 +14,16 @@
             margin:0;
             ul {
                 margin:0;
-                padding:0;
+                padding:0 0 10px 0;
+                display: flex;
+                display: -webkit-flex;
+                list-style: none;
                 li {
-                    display: inline-block;
+                    //display: inline-block;
                     &:first-child{
                         font-weight: bold;
                         width:35%;
-                        padding:0 10px 10px 0;
+                        padding:0 10px 0 0;
                     }
                     &:last-child{
                         width:65%;

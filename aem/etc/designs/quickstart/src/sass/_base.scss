@@ -44,6 +44,7 @@ h1,h2,h3,h4,h5,h6 {
       line-height:rem($eyebrow-fontsize * 1.5);
       margin-bottom:rem($globalmarginpx * .35);
       font-weight: bold;
+      color:$hilite;
   }
   &.subhead-style{
       text-transform: uppercase;
@@ -234,4 +235,8 @@ dl{
             left:0;
         }
     }
+}
+
+.thumbnail-img{
+    max-width:240px;
 }

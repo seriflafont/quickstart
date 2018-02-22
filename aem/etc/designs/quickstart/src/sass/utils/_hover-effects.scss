@@ -20,6 +20,9 @@
     &.muted {
         color: $darkgrey;
     }
+    &.inline{
+        padding-bottom:.5em;
+    }
 }
 
 .link--underline {

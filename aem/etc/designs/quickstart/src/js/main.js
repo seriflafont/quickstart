@@ -8,6 +8,7 @@ var PAGE = (function ($) {
 	var _iframeCover = $('.mouse-wheel-cover');
 	// module code here
 	page.init = function(){
+		console.log('page init');
 		_animateScrollElements = $('.animate-on-scroll');
 		$(window).on('scroll', function(){
 			if($('body').hasClass('stop-scroll')) {
